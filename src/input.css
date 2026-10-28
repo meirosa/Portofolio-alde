@@ -30,3 +30,68 @@ body {
 #dark-toggle:checked ~ label div.toggle-circle {
   @apply translate-x-3;
 }
+
+#Portfolio .project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+@media (min-width: 768px) {
+  #Portfolio .project-card {
+    width: calc(50% - 1.5rem);
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
+}
+
+.dark #Portfolio .project-card {
+  border-color: rgba(148, 163, 184, 0.16);
+  background: #0f172a;
+}
+
+#Portfolio .project-card > div:first-child {
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  background: white;
+}
+
+#Portfolio .project-card > div:first-child img {
+  height: 19rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+#Portfolio .project-card h3 {
+  min-height: 3.25rem;
+  margin: 0.75rem 0 0.75rem;
+  padding: 0 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+#Portfolio .project-card p {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+#Portfolio .project-card > a {
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 9999px;
+  background: transparent;
+  padding: 0;
+  color: #e88900;
+  font-weight: 700;
+}
+
+#Portfolio .project-card > a:hover {
+  opacity: 0.75;
+}
